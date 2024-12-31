@@ -1,0 +1,78 @@
+.authLayout {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  min-width: 100vw;
+  min-height: 100vh;
+
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pageBody {
+  flex-grow: 1;
+  display: grid;
+  grid: 1fr max-content / 100%;
+  column-gap: 24px;
+  row-gap: 24px;
+  border-top: 1px solid #05002080;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+@media only screen and (min-width: 576px) {
+  .pageBody {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .pageBody {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    grid: none / minmax(0, 1fr) 440px;
+  }
+}
+
+.panel {
+  background-color: var(--panel-background);
+  color: var(--panel-text);
+}
+@media only screen and (min-width: 576px) {
+  .panel {
+    border-radius: 24px;
+  }
+}
+
+.contentPanel {
+  align-self: stretch;
+}
+
+.behindScenesPanel {
+  padding: 40px 24px;
+}
+
+.behindScenesToggleButton {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font-size: 1.7em;
+  font-weight: bold;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.behindScenesToggleButton::after {
+  transition: transform 0.2s;
+}
+
+.behindScenesToggleButton[aria-expanded='true']::after {
+  transform: rotate(180deg);
+}

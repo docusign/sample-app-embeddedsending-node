@@ -1,0 +1,19 @@
+/* HACK: Table cell that has an open dropdown should be drawn in front of other cells */
+.actionsCell:has(:global(.dropdown-menu.show)) {
+  z-index: 1;
+}
+
+.actions {
+  display: flex;
+}
+
+.editButton {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.templatesDropdown {
+  --bs-dropdown-bg: var(--popup-background);
+  --bs-body-color: var(--popup-text);
+  --bs-dropdown-link-hover-bg: #ffffff0d;
+}

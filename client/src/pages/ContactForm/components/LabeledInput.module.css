@@ -1,0 +1,41 @@
+.group {
+  font-size: 0.85em;
+}
+
+.formElement {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px;
+  background: transparent;
+  border-width: 1px;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: var(--panel-separator);
+  color: inherit;
+  font-size: inherit;
+  position: relative;
+}
+
+select.formElement {
+  -webkit-appearance: none;
+  appearance: none;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 8px) center;
+  background-image: url('../../../assets/img/arrowDropdown.svg');
+}
+
+.formElementInvalid {
+  border-color: var(--error-main);
+}
+
+.formElement:focus {
+  border-color: var(--primary-main);
+  outline: none;
+}
+
+.error {
+  text-align: right;
+  color: var(--error-main);
+}

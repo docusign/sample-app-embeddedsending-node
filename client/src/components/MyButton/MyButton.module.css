@@ -1,0 +1,62 @@
+.myButton {
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 9px 24px;
+  font-weight: bold;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.myButton:focus,
+.myButton:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.myButton.myButtonLoading {
+  cursor: progress;
+}
+
+.myButton:disabled:not(.myButtonLoading) {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.spinner {
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Variants */
+.primary {
+  color: var(--primary-text);
+  background-color: var(--primary-main);
+  border: none;
+}
+.primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.secondary {
+  color: var(--primary-main);
+  background-color: transparent;
+  border: 2px solid var(--primary-main);
+  padding: 7px 24px;
+}
+.secondary:hover {
+  background-color: color-mix(in srgb, transparent, var(--primary-main) 10%);
+}
+
+.link {
+  color: var(--primary-main);
+  background: transparent;
+  border: none;
+}
+.link:hover {
+  color: var(--primary-hover);
+}

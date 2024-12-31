@@ -1,0 +1,115 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  min-width: 100vw;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: url('../../assets/img/background.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.heroContent {
+  color: var(--black-main);
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.messageBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  max-width: 600px;
+  text-align: center;
+  white-space: pre-line;
+  text-wrap: balance;
+
+  color: var(--black-main);
+  font-size: 1.75em;
+  line-height: 1.1;
+  font-weight: bold;
+}
+@media only screen and (min-width: 576px) {
+  .header {
+    font-size: 3em;
+    line-height: 1.2;
+  }
+}
+
+.messageBox p {
+  text-align: center;
+  margin-top: 24px;
+  color: var(--black-main);
+}
+
+.ctaButton {
+  margin-top: 16px;
+}
+@media only screen and (min-width: 576px) {
+  .ctaButton {
+    margin-top: 40px;
+  }
+}
+
+.devAccountPanel {
+  padding: 16px;
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: rgba(5, 0, 32, 0.5);
+  backdrop-filter: blur(14px);
+  border-radius: 24px;
+  color: var(--panel-text);
+  text-wrap: balance;
+}
+@media only screen and (min-width: 576px) {
+  .devAccountPanel {
+    padding: 40px;
+  }
+}
+
+.devAccountTitleText {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  line-height: 1.3;
+}
+@media only screen and (min-width: 576px) {
+  .devAccountTitleText {
+    font-size: 1.7em;
+  }
+}
+
+.devAccountButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 8px;
+  margin-top: 32px;
+}
+@media only screen and (min-width: 576px) {
+  .devAccountButtons {
+    flex-direction: row;
+    gap: 32px;
+  }
+}

@@ -1,0 +1,13 @@
+.link:hover {
+  color: var(--primary-hover);
+}
+
+.noWrapBetweenTextAndIcon {
+  white-space: nowrap;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  transform: translateY(-2px);
+}

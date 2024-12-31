@@ -1,0 +1,62 @@
+@media only screen and (min-width: 576px) {
+  .loadingPopupContent {
+    min-width: 450px;
+  }
+}
+
+.form {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.authVariants {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #b2b5bc;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media only screen and (min-width: 576px) {
+  .label {
+    min-width: 360px;
+  }
+}
+
+.label:has(.radio:checked) {
+  border-color: var(--primary-main);
+}
+
+.radio {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../../assets/img/loginRadioUnchecked.svg');
+}
+
+.radio:checked {
+  background-image: url('../../assets/img/loginRadioChecked.svg');
+}
+
+.errorAlert {
+  margin-top: 16px;
+}
+
+.formButtons {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}

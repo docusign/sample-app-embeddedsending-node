@@ -1,0 +1,20 @@
+.badge {
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #00350d;
+  font-size: 0.7em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.success {
+  background-color: #34c759;
+}
+
+.neutral {
+  background-color: #ff9500;
+}
+
+.danger {
+  background-color: #ff3b30;
+}

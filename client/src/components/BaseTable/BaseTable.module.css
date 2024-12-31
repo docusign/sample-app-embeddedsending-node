@@ -1,0 +1,47 @@
+/* HACK: overflow-x: auto causes Bootstrap's dropdown to show vertical scrollbar */
+.scrollableWrapper:not(:has(:global(.dropdown-menu.show))) {
+  overflow-x: auto;
+}
+
+.table {
+  border-collapse: collapse;
+  min-width: 100%;
+}
+
+.table tr {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--panel-separator);
+}
+
+.table > thead > tr {
+  border-bottom-color: var(--panel-text);
+}
+
+.table th {
+  text-transform: uppercase;
+  padding: 8px 16px;
+  font-size: 0.75em;
+}
+
+.table td {
+  padding: 8px 16px;
+}
+
+@media (hover: hover) {
+  .table > tbody > tr:hover {
+    background-color: #00091f33;
+  }
+}
+
+.stickyColumn {
+  width: 1%;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 576px) {
+  .stickyColumn {
+    position: sticky;
+    right: 0;
+    background: linear-gradient(-90deg, var(--panel-background) 90%, transparent 100%);
+  }
+}

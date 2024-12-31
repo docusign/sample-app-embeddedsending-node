@@ -1,0 +1,11 @@
+.header {
+  position: relative;
+}
+
+.createContactButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px 16px;
+  font-size: 0.85;
+}

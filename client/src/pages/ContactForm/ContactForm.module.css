@@ -1,0 +1,57 @@
+.content {
+  padding: 32px 16px;
+}
+@media only screen and (min-width: 576px) {
+  .content {
+    padding: 40px 32px;
+  }
+}
+
+.header {
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+.fieldsetHeader {
+  font-size: 1.15em;
+  font-weight: 600;
+  border-bottom: 1px solid var(--panel-text);
+  margin-top: 32px;
+  margin-bottom: 0;
+}
+
+.inputsTable {
+  max-width: 600px;
+  padding-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 16px;
+  row-gap: 24px;
+}
+@media only screen and (min-width: 992px) {
+  .inputsTable {
+    grid-template-columns: repeat(2, minmax(256px, 1fr));
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .wideInput {
+    grid-column: 1 / span 2;
+  }
+}
+
+.buttons {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  column-gap: 24px;
+  row-gap: 16px;
+}
+@media only screen and (min-width: 576px) {
+  .buttons {
+    margin-top: 60px;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}

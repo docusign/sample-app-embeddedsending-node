@@ -1,0 +1,143 @@
+{
+  "hero": {
+    "title": "Welcome to the\nEmbedded Sending Sample App",
+    "paragraph": "Discover how Docusign’s embedded sending features can be used in a generic sales CRM.",
+    "tryButton": "Try the App",
+    "devPanel": {
+      "blurb": "Docusign: Build the future of agreements",
+      "subtitle": "Powering the world's agreements with Docusign APIs",
+      "createDevAccount": "Create developer account",
+      "learnMore": "Learn more"
+    }
+  },
+  "header": {
+    "appName": "Embedded Sending",
+    "github": "GitHub",
+    "toggleNavigation": "Toggle navigation"
+  },
+  "footer": {
+    "copyright": "© 2024 Docusign Inc."
+  },
+  "login": {
+    "selectType": "Select authentication type",
+    "acg": "Developer account",
+    "jwt": "Preconfigured account",
+    "loading": {
+      "title": "Please wait",
+      "signingIn": "signing you in",
+      "setupAccount": "setting up your demo account"
+    }
+  },
+  "tabs": {
+    "dashboard": "Dashboard",
+    "templates": "Templates",
+    "contacts": "Contacts"
+  },
+  "envelopes": {
+    "emptyList": "Create some Embedded Sending transactions and they will start showing up here",
+    "goToContacts": "Go to Contacts",
+    "loading": "Loading dashboard...",
+    "envelopeContacts": "Name",
+    "envelopeName": "Envelope Name",
+    "envelopeStatus": "Status",
+    "envelopeTimestamp": "Timestamp",
+    "envelopeAction": "Action",
+    "edit": "Edit",
+    "status": {
+      "correct": "Correct",
+      "completed": "Completed",
+      "created": "Created",
+      "declined": "Declined",
+      "delivered": "Delivered",
+      "sent": "Sent",
+      "voided": "Voided",
+      "signed": "Signed",
+      "unknown": "N/A"
+    },
+    "behindScenes": {
+      "scenarioOverview": "This scenario displays a list of envelopes sent during the current session, enabling users to review and edit envelopes before they are signed.",
+      "codeFlow": "View the source code: [envelopesController.js](https://github.com/docusign/sample-app-embeddedsending-node/blob/main/server/controllers/envelopesController.js)",
+      "step1": "The application retrieves envelopes using the `getEnvelope` method\u00a0([see API docs](https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/get/)), ensuring that the latest envelope information is displayed. The envelopes are identified by the IDs stored in the session when they were sent.",
+      "step2": "When you click **Edit**, a URL is generated with the `createCorrectView` method\u00a0([see API docs](https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopeviews/createcorrect/)). The browser is then redirected to this URL, enabling you to modify the envelope in the correction view."
+    }
+  },
+  "templates": {
+    "templateName": "Template name",
+    "templateAction": "Action",
+    "edit": "Edit",
+    "loading": "Loading templates...",
+    "behindScenes": {
+      "scenarioOverview": "This scenario presents a list of templates and provides options to edit and customize them as needed.",
+      "codeFlow": "View the source code: [templatesController.js](https://github.com/docusign/sample-app-embeddedsending-node/blob/main/server/controllers/templatesController.js)",
+      "step1": "At the start of each user session, three unique templates are created automatically using the `createTemplate` method\u00a0([see API docs](https://developers.docusign.com/docs/esign-rest-api/reference/templates/templates/create/)). The NDA template uses the Document Generation feature to fill in placeholders with specific information based on predefined rules.",
+      "step2": "The application fetches information about these templates using their unique identifiers\u00a0([see API docs](https://developers.docusign.com/docs/esign-rest-api/reference/templates/templates/get/)), ensuring the templates reflect all changes made during the session.",
+      "step3": "When you click **Edit**, a URL is generated using the `createEdit` method\u00a0([see API docs](https://developers.docusign.com/docs/esign-rest-api/reference/templates/templateviews/createedit/)). You are then redirected to this URL, where you can make changes to the selected template."
+    }
+
+  },
+  "contacts": {
+    "createContact": "Add contact",
+    "contactName": "Contact name",
+    "contactCompany": "Company",
+    "actions": "Actions",
+    "editContact": "Edit",
+    "sendEnvelope": "Send envelope",
+    "behindScenes": {
+      "scenarioOverview": "This scenario displays the available recipients for your envelopes. You can add or edit contacts, and most importantly, send them an envelope using a selected template.",
+      "codeFlow": "View the source code: [contactsController.js](https://github.com/docusign/sample-app-embeddedsending-node/blob/main/server/controllers/contactsController.js)",
+      "step1": "For demonstration purposes, when you sign in, three default contacts are created and stored in localStorage. These are placeholder contacts; if you'd like to test Docusign's signing capabilities, we recommend adding a real contact.",
+      "step2": "When you select a template to send, it is used to create a new envelope populated with the selected contact's information\u00a0([see API docs for createEnvelope](https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopeviews/createsender/)).",
+      "step3": "The newly created envelope is then used to generate a sender view URL\u00a0([see API docs for createSenderView](https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopeviews/createsender/)). The browser is then redirected to this URL to open the sender view."
+    }
+  },
+  "contactForm": {
+    "addContact": "Add contact",
+    "editContact": "Edit contact",
+    "generalInfo": "General information",
+    "companyAddress": "Company address",
+    "field": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone number",
+      "organization": "Company",
+      "organizationStreet1": "Street 1",
+      "organizationStreet2": "Street 2 (Optional)",
+      "organizationCity": "City",
+      "organizationState": "State",
+      "organizationZip": "Postal code",
+      "organizationCountry": "Country"
+    },
+    "error": {
+      "required": "Required field",
+      "invalid": "Invalid format"
+    },
+    "back": "Back",
+    "behindScenes": {
+      "scenarioOverview": "This scenario enables you to add custom contacts. The entered information is used during envelope creation and, optionally, during document generation. All data is stored locally on your device, so please exercise caution when entering personal details."
+    }
+  },
+  "behindScenesCommon": {
+    "behindScenes": "Behind the scenes",
+    "scenarioOverview": "Scenario overview",
+    "codeFlow": "Code flow",
+    "step1": "Step 1",
+    "step2": "Step 2",
+    "step3": "Step 3"
+  },
+  "buttons": {
+    "login": "Log in",
+    "cancel": "Cancel",
+    "close": "Close"
+  },
+  "popups": {
+    "errorPopup": {
+      "title": "Error",
+      "unexpectedError": "An unexpected error has occurred. Please try again"
+    }
+  },
+  "links": {
+    "github": "https://github.com/docusign/sample-app-embeddedsending-node",
+    "createsandbox": "https://go.docusign.com/o/sandbox/",
+    "learnmore": "https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/embedding/embed-sender-correct-views/"
+  }
+}
