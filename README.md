@@ -4,10 +4,6 @@
 
 Welcome to the Embedded Sending Sample App! This application showcases Docusign embedded sending features designed for various use cases. Built using Node.js and React, Embedded Sending allows you to seamlessly integrate document signing workflows into your processes, enhancing efficiency and user experience across multiple scenarios.
 
-Embedded Sending demonstrates how to leverage Docusign powerful capabilities to create embedded workflows that simplify the sending and management of various documents. With features such as ID verification, Web Forms, and eSignature integrated with customizable workflows, this app provides a comprehensive solution for automating your agreement processes without extensive coding.
-
-Embedded Sending empowers users to streamline workflows across various document types, driving faster agreement turnaround times and improving productivity. Embedded Sending offers a flexible and powerful solution to meet your diverse needs.
-
 ## Configuring your integration
 
 Before you can run this sample app on your local machine, you must first create a new integration key in your Docusign developer account.
