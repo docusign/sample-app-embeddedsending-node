@@ -2,7 +2,7 @@
   "hero": {
     "title": "Welcome to the\nEmbedded Sending Sample App",
     "paragraph": "Discover how Docusign’s embedded sending features can be used in a generic sales CRM.",
-    "authenticationList": "Supports both Authentication Code Grant and JSON Web Token (JWT) authentication.",
+    "authenticationList": "Supports both Authorization Code Grant and JSON Web Token (JWT) authentication.",
     "tryButton": "Try the App",
     "devPanel": {
       "blurb": "Docusign: Build the future of agreements",
