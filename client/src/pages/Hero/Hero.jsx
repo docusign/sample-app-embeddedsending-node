@@ -42,6 +42,7 @@ const Hero = () => {
         <section className={styles.messageBox}>
           <h1 className={styles.header}>{t.hero.title}</h1>
           <p>{t.hero.paragraph}</p>
+          <p><strong><em>{t.hero.authenticationList}</em></strong></p>
           <MyButton onClick={handleTryButtonClick} className={styles.ctaButton} showLoading={isTryButtonLoading}>
             {t.hero.tryButton}
           </MyButton>
