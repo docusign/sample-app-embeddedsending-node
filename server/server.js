@@ -6,19 +6,18 @@ const bodyParser = require('body-parser');
 const session = require('express-session'); // https://github.com/expressjs/session
 const MemoryStore = require('memorystore')(session); // https://github.com/roccomuso/memorystore
 const passport = require('passport');
-const JwtController = require('./controllers/jwtController');
-const ACGController = require('./controllers/acgController');
 const cors = require('cors');
 const chalk = require('chalk');
 const DocusignStrategy = require('passport-docusign');
 const moment = require('moment');
 const config = require('./config');
-const { EMBEDDED_SENDING_SCOPES, BackendRoute, AuthMethod } = require('./constants');
+const { EMBEDDED_SENDING_SCOPES, BackendRoute } = require('./constants');
 const authRouter = require('./routes/authRouter');
 const templatesRouter = require('./routes/templatesRouter');
 const contactsRouter = require('./routes/contactsRouter');
 const envelopesRouter = require('./routes/envelopesRouter');
 const createPrefixedLogger = require('./utils/logger');
+const resolveAuthController = require('./utils/authControllerResolver');
 
 const logger = createPrefixedLogger();
 const maxSessionAge = 1000 * 60 * 60 * 24 * 1; // One day
@@ -42,18 +41,10 @@ const app = express()
   .use(passport.session())
   // Add an instance of dsAuthController to req
   .use((req, res, next) => {
-    req.dsAuthCodeGrant = new ACGController();
-    req.dsAuthJwt = new JwtController();
     req.logger = logger;
     req.logger.info(`[${req.originalUrl}]`);
 
-    switch (true) {
-      case req.session.authMethod === AuthMethod.JWT || req.url.startsWith(`${BackendRoute.AUTH}/jwt`):
-        req.dsAuth = req.dsAuthJwt;
-        break;
-      case req.session.authMethod === AuthMethod.ACG || req.url.startsWith(`${BackendRoute.AUTH}/passport`):
-        req.dsAuth = req.dsAuthCodeGrant;
-    }
+    req.dsAuth = resolveAuthController(req);
 
     next();
   })

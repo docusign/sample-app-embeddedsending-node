@@ -23,7 +23,6 @@ class ACGController {
 
   login(req, res, next) {
     this.internalLogout(req);
-    req.session.authMethod = AuthMethod.ACG;
     passport.authenticate('docusign')(req, res, next);
   }
 
@@ -36,6 +35,7 @@ class ACGController {
     const { accessToken, tokenExpirationTimestamp, name, email } = req.user;
     this.logger.info(`Received accessToken: |${accessToken}|`);
     this.logger.info(`Expires at ${tokenExpirationTimestamp.format('dddd, MMMM Do YYYY, h:mm:ss a')}`);
+    req.session.authMethod = AuthMethod.ACG;
 
     // The DocuSign Passport strategy looks up the user's account information via OAuth::userInfo.
     // See https://developers.docusign.com/esign-rest-api/guides/authentication/user-info-endpoints
