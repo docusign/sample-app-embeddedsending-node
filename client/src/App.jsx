@@ -18,6 +18,7 @@ import Contacts from './pages/Contacts/Contacts.jsx';
 import ContactForm from './pages/ContactForm/ContactForm.jsx';
 import DemoAccountInitializer from './services/demoAccountInitializer.js';
 import createPrefixedLogger from './helpers/logger.js';
+import Navigator from './pages/Navigator/Navigator.jsx';
 
 const logger = createPrefixedLogger('App');
 
@@ -61,6 +62,7 @@ function App() {
       <Route path={AppRoute.CONTACTS} element={<Contacts />} />
       <Route path={AppRoute.ADD_CONTACT} element={<ContactForm />} />
       <Route path={AppRouteFactory.createEditContact(':contactId')} element={<ContactForm />} />
+      <Route path={AppRoute.NAVIGATOR} element={<Navigator />} />
     </Routes>
   );
 }

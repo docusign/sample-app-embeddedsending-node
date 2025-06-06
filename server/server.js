@@ -16,6 +16,7 @@ const authRouter = require('./routes/authRouter');
 const templatesRouter = require('./routes/templatesRouter');
 const contactsRouter = require('./routes/contactsRouter');
 const envelopesRouter = require('./routes/envelopesRouter');
+const navigatorRouter = require('./routes/navigatorRouter');
 const createPrefixedLogger = require('./utils/logger');
 const resolveAuthController = require('./utils/authControllerResolver');
 
@@ -55,6 +56,7 @@ app.use(BackendRoute.AUTH, authRouter);
 app.use(BackendRoute.TEMPLATE, templatesRouter);
 app.use(BackendRoute.CONTACT, contactsRouter);
 app.use(BackendRoute.ENVELOPE, envelopesRouter);
+app.use(BackendRoute.NAVIGATOR, navigatorRouter);
 
 async function start() {
   try {
