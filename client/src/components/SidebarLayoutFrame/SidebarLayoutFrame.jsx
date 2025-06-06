@@ -22,6 +22,9 @@ const SidebarLayoutFrame = ({ children }) => {
         <NavLink to={AppRoute.CONTACTS} className={getNavLinkClass}>
           <ContactsIcon className={styles.sidebarLinkIcon} /> {t.tabs.contacts}
         </NavLink>
+        <NavLink to={AppRoute.NAVIGATOR} className={getNavLinkClass}>
+          <ContactsIcon className={styles.sidebarLinkIcon} /> {t.tabs.navigator}
+        </NavLink>
       </div>
       <main className={styles.mainContent}>{children}</main>
     </div>

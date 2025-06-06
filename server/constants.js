@@ -3,6 +3,7 @@ const BackendRoute = {
   TEMPLATE: '/api/templates',
   CONTACT: '/api/contacts',
   ENVELOPE: '/api/envelopes',
+  NAVIGATOR: '/api/navigator'
 };
 
 const AuthMethod = {
