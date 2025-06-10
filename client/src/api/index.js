@@ -4,7 +4,6 @@ import { clearAllState } from '../store/actions';
 
 const isDev = process.env.NODE_ENV === 'development';
 const apiUrl = isDev ? process.env.BACKEND_DEV_HOST : process.env.BACKEND_PROD_HOST;
-
 const clearState = async () => {
   store.dispatch(clearAllState());
   await persistor.purge();
@@ -78,5 +77,8 @@ export const api = Object.freeze({
   },
   contacts: {
     send: data => instance.post('/contacts/send', data),
+  },
+  navigator: {
+    getData: () => instance.get('/navigator/data'),
   },
 });

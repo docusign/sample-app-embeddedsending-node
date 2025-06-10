@@ -24,7 +24,7 @@ const ViewType = {
 
 // https://developers.docusign.com/platform/auth/reference/scopes/
 // signature - Required to call most eSignature REST API endpoints
-const EMBEDDED_SENDING_SCOPES = ['signature', 'impersonation'];
+const EMBEDDED_SENDING_SCOPES = ['signature', 'impersonation', 'cds_read', 'adm_store_unified_repo_read'];
 
 const ALLOWED_FOR_EDIT_ENVELOPE_STATUSES = ['sent', 'correct'];
 
