@@ -32,7 +32,8 @@
   "tabs": {
     "dashboard": "Dashboard",
     "templates": "Templates",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "navigator": "Navigator"
   },
   "envelopes": {
     "emptyList": "Create some Embedded Sending transactions and they will start showing up here",
@@ -140,5 +141,12 @@
     "github": "https://github.com/docusign/sample-app-embeddedsending-node",
     "createsandbox": "https://go.docusign.com/o/sandbox/",
     "learnmore": "https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/embedding/embed-sender-correct-views/"
+  },
+  "navigator": {
+    "behindScenes": {
+      "scenarioOverview": "This scenario demonstrates a simple navigation widget that allows users to select different options.",
+      "codeFlow": "View the source code: [navigatorController.js](https://github.com/docusign/sample-app-embeddedsending-node/blob/main/server/controllers/navigatorController.js)",
+      "step1": "The application fetches navigation options from the backend API and displays them in an interactive widget."
+    }
   }
 }

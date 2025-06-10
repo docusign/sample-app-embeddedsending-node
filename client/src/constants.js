@@ -5,6 +5,7 @@ export const AppRoute = {
   CONTACTS: '/contacts',
   ADD_CONTACT: '/contacts/new',
   EDIT_CONTACT_PREFIX: '/contacts/edit',
+  NAVIGATOR: '/navigator'
 };
 
 export const AppRouteFactory = {
