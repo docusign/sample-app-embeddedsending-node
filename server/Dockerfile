@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 node:20.14 AS base
+FROM --platform=linux/amd64 node:26.12.1 AS base
 
 RUN mkdir -p /home/node/app
 WORKDIR /home/node
@@ -14,7 +14,7 @@ COPY server ./
 
 
 # Run stage
-FROM --platform=linux/amd64 node:20.14-alpine
+FROM --platform=linux/amd64 node:26.12.1-alpine
 
 RUN mkdir -p /home/node/app
 COPY --from=base /home/node /home/node

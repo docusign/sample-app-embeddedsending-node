@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 node:20.14 AS base
+FROM --platform=linux/amd64 node:26.12.1 AS base
 
 # Declare build arguments from docker-compose.local.yaml. Set default arguments
 ARG NODE_ENV=development
