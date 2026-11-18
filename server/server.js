@@ -1,3 +1,4 @@
+require('./utils/slowBufferCompatibility');
 require('dotenv').config();
 
 const express = require('express');
